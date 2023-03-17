@@ -1,6 +1,10 @@
 @font-face {
   font-family: 'Trajan Pro Regular';
-  src:  url('..//public/Trajan Pro Regular.woff') format('woff');
+  src:  url('./assets/fonts/Trajan Pro Regular.eot');
+  src:  url('./assets/fonts/Trajan Pro Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./assets/fonts/Trajan Pro Regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./assets/fonts/Trajan Pro Regular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('./assets/fonts/Trajan Pro Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 * {
@@ -15,13 +19,24 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Trajan Pro Regular', Courier, monospace;
+  overscroll-behavior-y: none;
 }
 
-.container {
+.text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
+.text-container h1 {
+  font-size: 5rem;
+}
+
+.text-container h1, h2{
+  font-weight: lighter;
 }
 
 .bg-vid {
@@ -34,11 +49,8 @@ body {
   z-index: -1;
 }
 
-@font-face {
-  font-family: 'Trajan Pro Regular';
-  src:  url('..//public/Trajan Pro Regular.eot');
-  src:  url('Trajan Pro Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('Trajan Pro Regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('Trajan Pro Regular.woff') format('woff'), /* Pretty Modern Browsers */
-        url('Trajan Pro Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
