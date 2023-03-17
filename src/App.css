@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Trajan Pro Regular';
+  src:  url('..//public/Trajan Pro Regular.woff') format('woff');
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -9,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Trajan Pro Regular', Courier, monospace;
 }
 
 .container {
@@ -26,4 +32,13 @@ body {
   object-fit: cover;
   position: fixed;
   z-index: -1;
+}
+
+@font-face {
+  font-family: 'Trajan Pro Regular';
+  src:  url('..//public/Trajan Pro Regular.eot');
+  src:  url('Trajan Pro Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('Trajan Pro Regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('Trajan Pro Regular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('Trajan Pro Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
