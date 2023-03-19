@@ -12,6 +12,18 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(99, 99, 99);
   height: 100vh;
@@ -20,23 +32,39 @@ body {
   justify-content: center;
   font-family: 'Trajan Pro Regular', Courier, monospace;
   overscroll-behavior-y: none;
-}
-
-.text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: hidden;
   color: #fff;
   text-shadow: 5px 5px 5px rgb(0, 0, 0);
-  font-size: 2rem;
 }
 
-.text-container h1 {
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: space-around; */
+  justify-content: space-between;
+  font-size: 2rem;
+  text-align: center;
+  height: 200px;
+}
+
+.main-container h1 {
   font-size: 5rem;
 }
 
-.text-container h1, h2{
-  font-weight: lighter;
+.mask {
+  background-color: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0%;
+}
+
+.fade {
+  position: fixed;
+  top: 50%
 }
 
 .bg-vid {
@@ -46,11 +74,64 @@ body {
   left: 0;
   object-fit: cover;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
+}
+
+.bg-selector-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 430px; /* 520px was default*/
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 30px;
+}
+
+.bg-selector-container p{
+  font-size: 1.4rem;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: 20px;
+  color:rgb(0, 0, 0);
+}
+
+/* .footer a {
+  cursor: help;
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+} */
+
+.left {
+  transform: scale(0.8) rotate(180deg);
+  cursor: pointer;
+}
+
+.right {
+  transform: scale(0.8);
+  cursor: pointer;
+}
+
+.page {
+  position: fixed;
+  bottom: 20px;
+}
+
+@media (max-width: 450px) {
+  .main-container h1 {
+    font-size: 4rem;
+  }
+
+  .main-container h2 {
+    font-size: 2.5rem;
+  }
+  .bg-selector-container{
+    width: 80vw;
+  }
+  .bg-selector-container p{
+    font-size: 1.1rem;
+  }
 }

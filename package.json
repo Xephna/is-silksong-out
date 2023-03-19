@@ -5,13 +5,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gsap": "^3.11.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
